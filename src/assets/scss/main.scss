@@ -1,0 +1,12 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
+@import "./variables";
+
+@import "~bootstrap/scss/bootstrap";
+
+$color-main: #e60012;
+$color-back: #fff;
+
+img{
+    width: 100%;
+}

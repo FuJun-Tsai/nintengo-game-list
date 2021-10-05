@@ -1,7 +1,19 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-4 p-0">
+          <img src="../assets/imgs/曠野之息/1.jpeg">
+        </div>
+        <div class="col-4 p-0">
+          <img src="../assets/imgs/曠野之息/2.jpeg">
+        </div>
+        <div class="col-4 p-0">
+          <img src="../assets/imgs/曠野之息/4.jpeg">
+        </div>
+      </div>
+    </div>
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 

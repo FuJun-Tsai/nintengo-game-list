@@ -1,40 +1,28 @@
 <template>
-  <div id="nav">
-    <div class="links">
-      <router-link to="/">首頁</router-link>
-      <router-link to="/about">列表</router-link>
+    <div id="nav" class="d-flex justify-content-between align-items-center">
+      <h1 class="ms-2">Chi 遊戲評測</h1>
+      <div class="links">
+        <router-link class="fs-4 me-3" to="/">首頁</router-link>
+        <router-link class="fs-4 me-3" to="/about">列表</router-link>
+      </div>
     </div>
-  </div>
   <router-view/>
 </template>
 
 <style lang="scss">
-@for $i from 1 to 7 {
-  h#{$i}{
-    margin: 0;
-    font-size: ( 7 - $i ) * 0.25em + 1em;
-  }
-}
-
-body{
-  margin: 0;
-}
+@import './assets/scss/main.scss';
 
 #nav{
-  background: #e61911;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  background: $color-main;
+  h1{
+    color: $color-back;
+  }
 }
 
 .links{
   a{
-    font-size: 20px;
-    color: #fff;
-    margin-right: 12px;
-    padding: 4px;
+    color: $color-back;
     text-decoration: none;
   }
 }
-
 </style>
