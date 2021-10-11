@@ -524,7 +524,8 @@ $border-widths: (
   5: 5px
 ) !default;
 
-$border-color:                $gray-300 !default;
+// $border-color:                $gray-300 !default;
+$border-color:                #fff !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables

@@ -1,7 +1,9 @@
 <template>
-  <div class="container-fluid p-0">
+  <div class="container-fluid">
     <div class="row">
-      <img src="../assets/imgs/曠野之息/1.jpeg" alt="">
+      <div class="col-12 p-0">
+        <img src="../assets/imgs/曠野之息/1.jpeg" alt="">
+      </div>
     </div>
   </div>
 </template>
