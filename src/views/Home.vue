@@ -3,13 +3,13 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-4 p-0">
-          <img src="../assets/imgs/曠野之息/1.jpeg">
+          <img src="../assets/imgs/薩爾達傳說-曠野之息/1.jpeg">
         </div>
         <div class="col-4 p-0">
-          <img src="../assets/imgs/曠野之息/2.jpeg">
+          <img src="../assets/imgs/薩爾達傳說-曠野之息/2.jpeg">
         </div>
         <div class="col-4 p-0">
-          <img src="../assets/imgs/曠野之息/4.jpeg">
+          <img src="../assets/imgs/薩爾達傳說-曠野之息/4.jpeg">
         </div>
       </div>
     </div>
