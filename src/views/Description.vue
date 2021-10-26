@@ -25,13 +25,7 @@
            <hr class="mt-0">
            <p v-html="content.description[index]" class="mb-5">
            </p>
-            <!-- {{content.description[index]}} -->
       </div>
-      <img :src='img1'>
-      <img :src='img2'>
-      <img :src='img3'>
-      <!-- <img :src='require(`../assets/imgs/${name}/2.jpeg`)'> -->
-      <img src="../assets/imgs/薩爾達傳說-曠野之息/2.jpeg" alt="">
     </div>
   </div>
 </template>

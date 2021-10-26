@@ -20,7 +20,17 @@
                     class="fs-4 ms-md-2 me-md-2 my-1 ps-2 ps-md-0" to="/about">列表</router-link>
     </div>
   </div>
-  <router-view/>
+  <router-view class="mb-5" />
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="mb-0">圖片版權皆為 任天堂 所有，網站無任何金流交易。</p>
+          <p class="mb-0">Copyright © {{year}} Chi. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -28,6 +38,7 @@ export default {
   data() {
     return {
       open: false,
+      year: 0,
       list: {
         items: 0,
         height: 0,
@@ -43,10 +54,14 @@ export default {
       this.list.height = this.$refs.list.querySelector('a').getBoundingClientRect().height + 8;
       this.list.items = this.$refs.list.querySelectorAll('a').length;
     },
+    getTime() {
+      this.year = new Date().getFullYear();
+    },
   },
   mounted() {
     this.navHeight();
     this.getHeight();
+    this.getTime();
   },
 };
 </script>
@@ -159,5 +174,11 @@ export default {
       }
     }
   }
+}
+
+footer{
+  padding: 20px 0;
+  color: #fff;
+  background: #e60012;
 }
 </style>
