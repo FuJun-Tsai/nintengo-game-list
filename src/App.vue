@@ -1,23 +1,25 @@
 <template>
-    <div id="nav" class="d-flex flex-wrap justify-content-between align-items-center p-2">
-      <h1 class="mb-0">任天堂遊戲評測</h1>
-      <div @click="open = !open"
-           id="toggle"
-           class="me-2 border border-2 rounded position-relative d-md-none"
-           :class="{active:open===true}">
-        <span id="top"></span>
-        <span id="middle"></span>
-        <span id="bottom"></span>
-      </div>
-      <div :class="{'active':open===true}"
-           ref="list"
-           class="d-flex flex-column d-md-flex flex-md-row links">
-        <router-link @click="open=false"
-                     class="fs-4 me-3 my-1 ps-2 ps-md-0" to="/">首頁</router-link>
-        <router-link @click="open=false"
-                     class="fs-4 me-3 my-1 ps-2 ps-md-0" to="/about">列表</router-link>
-      </div>
+  <div id="nav" ref="nav"
+       class="d-flex flex-wrap justify-content-between align-items-center
+              position-fixed top-0 w-100 p-2 shadow-lg">
+    <h1 class="mb-0">任天堂遊戲評測</h1>
+    <div @click="open = !open"
+          id="toggle"
+          class="me-2 border border-2 rounded position-relative d-md-none"
+          :class="{active:open===true}">
+      <span id="top"></span>
+      <span id="middle"></span>
+      <span id="bottom"></span>
     </div>
+    <div :class="{'active':open===true}"
+          ref="list"
+          class="flex-column d-md-flex flex-md-row links">
+      <router-link @click="open=false"
+                    class="fs-4 ms-md-2 me-md-2 my-1 ps-2 ps-md-0" to="/">首頁</router-link>
+      <router-link @click="open=false"
+                    class="fs-4 ms-md-2 me-md-2 my-1 ps-2 ps-md-0" to="/about">列表</router-link>
+    </div>
+  </div>
   <router-view/>
 </template>
 
@@ -26,19 +28,24 @@ export default {
   data() {
     return {
       open: false,
+      list: {
+        items: 0,
+        height: 0,
+      },
     };
   },
   methods: {
-    getHeight() {
-      // const itemHeight = this.$refs.list.querySelector('a').getBoundingClientRect().height;
-      // const count = this.$refs.list.querySelectorAll('a').length;
-      console.log(document.querySelector('.links.active'));
-      // document.querySelector('.links.active').style.height = `${itemHeight * count}px`;
+    navHeight() {
+      const navHeight = this.$refs.nav.getBoundingClientRect().height;
+      document.querySelector('#app').style.marginTop = `${navHeight}px`;
     },
-    listToggle() {
+    getHeight() {
+      this.list.height = this.$refs.list.querySelector('a').getBoundingClientRect().height + 8;
+      this.list.items = this.$refs.list.querySelectorAll('a').length;
     },
   },
   mounted() {
+    this.navHeight();
     this.getHeight();
   },
 };
@@ -49,6 +56,7 @@ export default {
 
 #nav{
   background: $color-main;
+  z-index: 1;
   h1{
     color: $color-back;
   }
@@ -128,10 +136,14 @@ export default {
 
 .links{
   transition-duration: .3s;
+  display: flex;
   @media (max-width:768px) {
+    height: 0;
     flex-basis: 100%;
     overflow: hidden;
-    height: 0px;
+    &.active{
+      height: auto;
+    }
   }
   a{
     color: $color-back;
