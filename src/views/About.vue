@@ -27,7 +27,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-10 col-12">
+        <div class="col-lg-10 col-12 mb-4">
           <div class="card">
             <div class="row w-100 m-auto">
               <div class="title col-md-4 border-end border-bottom border-2
@@ -45,7 +45,8 @@
                     <div class="row">
                       <div @click="dateSort()"
                            class="title border-end border-bottom border-2 text-center col-md-6
-                                  col-12 p-0 py-2 py-md-0">
+                                  col-12 p-0 py-2 py-md-0
+                                  border-end-none">
                         {{source.title.release}}
                         <font-awesome-icon  v-if="sorted === false"
                                             :icon="['fas', 'bars']" />
@@ -245,7 +246,6 @@ export default {
       color: #fff;
     }
     .tag{
-      cursor: pointer;
       span{
         background: #fff;
       }
@@ -269,6 +269,12 @@ export default {
     cursor: pointer;
     &:hover{
       color: #111;
+    }
+  }
+
+  .border-end-none{
+    @media (max-width: 768px) {
+      border-right: 0px !important;
     }
   }
 </style>

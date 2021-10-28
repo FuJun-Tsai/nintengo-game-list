@@ -37,7 +37,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row mb-4">
         <div class="col-12">
           <h2 class="mb-1">開發感想</h2>
           <hr class="mt-0">

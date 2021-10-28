@@ -20,7 +20,7 @@
                     class="fs-4 ms-md-2 me-md-2 my-1 ps-2 ps-md-0" to="/about">列表</router-link>
     </div>
   </div>
-  <router-view class="mb-5" />
+  <router-view/>
   <footer>
     <div class="container">
       <div class="row">
