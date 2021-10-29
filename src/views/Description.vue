@@ -19,12 +19,15 @@
       <div v-for="item,index in content.length"
            :key="index"
            class="col-12">
-           <h3 class="mb-1">
+           <h3 class="mb-1 letter-space-1">
              {{content.title[index]}}
            </h3>
            <hr class="mt-0">
-           <p v-html="content.description[index]" class="mb-5">
+           <p v-html="content.description[index]" class="mb-5 letter-space-1">
            </p>
+      </div>
+      <div class="col-12 mb-5 text-center">
+        <span class="btn" @click="goList()">返回列表</span>
       </div>
     </div>
   </div>
@@ -74,6 +77,12 @@ export default {
             name: 'Error',
           });
         });
+    },
+    goList() {
+      // this.$router.push({
+      //   path: '/about',
+      // });
+      this.$router.back();
     },
   },
   created() {

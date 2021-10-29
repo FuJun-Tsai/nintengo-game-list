@@ -85,4 +85,25 @@ export default {
   hr{
     background: #e60012;
   }
+  .btn{
+    background-color: #e60012 !important;
+    color: #fff !important;
+    &:hover{
+      background-color: #fff !important;
+      color: #111 !important;
+      border: 1px solid #111;
+    }
+  }
+  .mouse-link{
+    cursor: pointer;
+    span{
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .mouse-arrow, body{
+    cursor: default;
+  }
 </style>

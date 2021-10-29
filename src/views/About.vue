@@ -16,13 +16,17 @@
                       :key="item"
                       @click="typesFilter(key,item)"
                       :class="{active:chosen.tag===item}"
-                      class="list-group-item tag">{{item}}</li>
+                      class="list-group-item tag mouse-link">
+                      <span>
+                        {{item}}
+                      </span>
+                  </li>
                 </ul>
               </div>
               <div class="text-center mb-3">
                 <span @click="conditionReset()"
                       v-if="chosen.type!=='' || sorted===true"
-                      class="d-inline-block m-auto text-center reset">列表還原</span>
+                      class="d-inline-block m-auto text-center reset mouse-link">列表還原</span>
               </div>
             </div>
           </div>
@@ -46,7 +50,7 @@
                       <div @click="dateSort()"
                            class="title border-end border-bottom border-2 text-center col-md-6
                                   col-12 p-0 py-2 py-md-0
-                                  border-end-none">
+                                  border-end-none mouse-link">
                         {{source.title.release}}
                         <font-awesome-icon  v-if="sorted === false"
                                             :icon="['fas', 'bars']" />
@@ -66,7 +70,7 @@
             </div>
             <div v-for="(item, index) in games" :key='index'
                  class="row w-100 m-auto border-bottom border-2">
-              <div class="d-flex align-items-center col-md-4 col-5">
+              <div class="d-flex align-items-center col-md-4 col-5 mouse-link">
                 <span @click="toDescription(item.name)">
                   {{item.name}}
                 </span>
@@ -230,7 +234,6 @@ export default {
   .attr{
     span{
       line-height: 1;
-      cursor: pointer;
       min-width: 25%;
       height: 24px;
       @media (max-width:768px) {
@@ -245,11 +248,6 @@ export default {
       background: #e60012;
       color: #fff;
     }
-    .tag{
-      span{
-        background: #fff;
-      }
-    }
   }
 
   .title{
@@ -260,13 +258,15 @@ export default {
   .tag.active{
     background: #e60012 !important;
     color: #fff;
+    span{
+      text-decoration: none;
+    }
   }
 
   .reset{
     text-decoration: underline;
     font-weight: bolder;
     color: #0077ff;
-    cursor: pointer;
     &:hover{
       color: #111;
     }
