@@ -18,13 +18,15 @@
       </div>
       <div v-for="item,index in content.length"
            :key="index"
-           class="col-12">
+           class="col-12 mb-5">
            <h3 class="mb-1 letter-space-1">
              {{content.title[index]}}
            </h3>
            <hr class="mt-0">
-           <p v-html="content.description[index]" class="mb-5 letter-space-1">
-           </p>
+           <p v-html="content.description[index]" class="mb-3 letter-space-1"></p>
+           <img src="../assets/imgs/薩爾達傳說-曠野之息/1.jpeg"
+                class="m-auto col-md-8 d-block"
+                alt="圖片不完整或者沒有圖片">
       </div>
       <div class="col-12 mb-5 text-center">
         <span class="btn" @click="goList()">返回列表</span>
@@ -79,9 +81,6 @@ export default {
         });
     },
     goList() {
-      // this.$router.push({
-      //   path: '/about',
-      // });
       this.$router.back();
     },
   },

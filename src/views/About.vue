@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-lg-2 col-12 mb-4">
           <div class="card">
-            <h4 class="text-center p-2 mb-3 title">標籤列表</h4>
+            <h4 class="text-center p-2 title">標籤列表</h4>
             <div class="list">
               <div v-for="(list,key) in tags"
                    :key="list"
@@ -84,14 +84,16 @@
                           class="d-md-inline-block mb-md-0 mx-md-2
                                  d-block p-1 mx-0 mb-2
                                  bg-white rounded-pill">
-                          {{Object.entries(tags)[index][1][parseInt(item)]}}</span>
+                          <!-- {{Object.entries(tags)[index][1][parseInt(item)]}} -->
+                          {{Object.entries(tags)[index][1][parseInt(item,10)]}}
+                    </span>
                   </div>
                   <div class="col-md-4 col-5">
                     <div class="row h-100">
                       <div class="d-flex align-items-center justify-content-center
                                   col-md-6 col-12 p-0">
-                        {{`${new Date(item.release).getFullYear()}.${
-                          new Date(item.release).getMonth()+1}`}}
+                        {{`${new Date(item.release).getFullYear()}.
+                        ${new Date(item.release).getMonth()+1}`}}
                         </div>
                       <div class="d-flex align-items-center justify-content-center col-md-6 col-12">
                         {{item.price}}
@@ -153,6 +155,7 @@ export default {
               return;
             }
             this.source.title.name = name;
+            this.source.title.attr = attr;
             this.source.title.price = price;
             this.source.title.release = release;
           });
