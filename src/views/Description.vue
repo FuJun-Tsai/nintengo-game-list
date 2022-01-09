@@ -24,7 +24,7 @@
            </h3>
            <hr class="mt-0">
            <p v-html="content.description[index]" class="mb-3 letter-space-1"></p>
-           <img src="../assets/imgs/薩爾達傳說-曠野之息/1.jpeg"
+           <img :src="require(`../assets/imgs/${name.split(' ').join('-')}/${index + 1}.jpg`)"
                 class="m-auto col-md-8 d-block"
                 alt="圖片不完整或者沒有圖片">
       </div>

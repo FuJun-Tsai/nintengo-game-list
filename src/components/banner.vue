@@ -2,7 +2,7 @@
   <div class="container-fluid mb-5">
     <div class="row">
       <div class="col-12 p-0">
-        <img src="../assets/imgs/薩爾達傳說-曠野之息/1.jpeg" alt="">
+        <img src="../assets/imgs/薩爾達傳說-曠野之息/1.jpg" alt="">
       </div>
     </div>
   </div>

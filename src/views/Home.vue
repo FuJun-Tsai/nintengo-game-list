@@ -3,13 +3,13 @@
     <div class="container-fluid mb-5">
       <div class="row">
         <div class="col-4 p-0">
-          <img src="../assets/imgs/薩爾達傳說-曠野之息/1.jpeg">
+          <img src="../assets/imgs/薩爾達傳說-曠野之息/1.jpg">
         </div>
         <div class="col-4 p-0">
-          <img src="../assets/imgs/薩爾達傳說-曠野之息/2.jpeg">
+          <img src="../assets/imgs/薩爾達傳說-曠野之息/2.jpg">
         </div>
         <div class="col-4 p-0">
-          <img src="../assets/imgs/薩爾達傳說-曠野之息/4.jpeg">
+          <img src="../assets/imgs/薩爾達傳說-曠野之息/4.jpg">
         </div>
       </div>
     </div>
@@ -28,11 +28,11 @@
           <div class="row">
             <div class="col-6 col-md-12">
               <img class="img-fluid img-thumbnail mb-3"
-                   src="../assets/imgs/薩爾達傳說-曠野之息/1.jpeg" alt="">
+                   src="../assets/imgs/薩爾達傳說-曠野之息/1.jpg" alt="">
             </div>
             <div class="col-6 col-md-12">
               <img class="img-fluid img-thumbnail mb-3"
-                   src="../assets/imgs/超級瑪利歐-奧德賽/1.jpeg" alt="">
+                   src="../assets/imgs/超級瑪利歐-奧德賽/1.jpg" alt="">
             </div>
           </div>
         </div>

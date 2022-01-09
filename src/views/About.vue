@@ -42,7 +42,8 @@
               </div>
               <div class="col-md-8 col-7">
                 <div class="row">
-                  <div class="title border-end border-bottom border-2 text-center col-md-8 col-7">
+                  <div class="title col-md-8 border-end border-bottom border-2
+                              d-flex justify-content-center align-items-center col-7">
                     {{source.title.attr}}
                   </div>
                   <div class="col-md-4 col-5">
@@ -85,7 +86,7 @@
                                  d-block p-1 mx-0 mb-2
                                  bg-white rounded-pill">
                           <!-- {{Object.entries(tags)[index][1][parseInt(item)]}} -->
-                          {{Object.entries(tags)[index][1][parseInt(item,10)]}}
+                      {{Object.entries(tags)[index][1][parseInt(item,10)]}}
                     </span>
                   </div>
                   <div class="col-md-4 col-5">
@@ -209,7 +210,7 @@ export default {
       this.descending = !this.descending;
     },
     conditionReset() {
-      this.games = JSON.parse(JSON.stringify(this.source.games));
+      this.games = [...this.source.games];
       this.chosen = { type: '', tag: '' };
       this.filtered = false;
       this.sorted = false;
@@ -220,10 +221,6 @@ export default {
         name: 'Description',
         params: { name },
       });
-    },
-  },
-  watch: {
-    chosen() {
     },
   },
   created() {
